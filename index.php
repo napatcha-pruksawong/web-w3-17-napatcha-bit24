@@ -19,7 +19,7 @@
             justify-content: center;
         }
 
-        /* ตกแต่งตารางให้ดูมินิมอลและเป็นระเบียบ */
+        
         table {
             width: 100%;
             max-width: 900px;
@@ -30,7 +30,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
-        /* หัวตาราง สีแดงหลักของ KFC แทรมขอบล่างสีดำ */
+        /
         thead {
             background-color: #e4002b; /* สีแดง KFC */
             color: #ffffff;
@@ -44,7 +44,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* เนื้อหาในตาราง */
+       
         td {
             padding: 16px;
             text-align: center;
@@ -53,12 +53,12 @@
             vertical-align: middle;
         }
 
-        /* แถวเว้นแถวให้มีสีเทาอ่อนช่วยให้มองง่าย */
+        
         tbody tr:nth-child(even) {
             background-color: #fdfdfd;
         }
 
-        /* เมื่อเอาเมาส์ไปชี้ที่แถว */
+        
         tbody tr:hover {
             background-color: #fff5f5; /* เปลี่ยนเป็นสีอมแดงอ่อนๆ */
         }
