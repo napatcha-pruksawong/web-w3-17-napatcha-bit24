@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KFC Menu</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>KFC Menu Types</title> <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -126,7 +125,7 @@
         include "action/connect.php";
         
         // select = ดึงข้อมูล , from = จากตาราง .. 
-        $sql = "SELECT * FROM menus" ;
+        $sql = "SELECT * FROM menu_types" ;
 
         // result สั่งให้ query ทำงาน
         // ที่อยู่ฐาน-รันที่ไหน รันอะไร
@@ -138,44 +137,29 @@
     ?>
 
     <div class="container">
-        <a href="menu_types.php" class="btn-kfc">ดูประเภทเมนู ➔</a>
+        <a href="index.php" class="btn-kfc">⬅ กลับหน้าหลักเมนู</a>
     </div>
 
     <table border=0>
         <thead>
-            <th>รหัสเมนู</th>
-            <th>ชื่อเมนู</th>
-            <th>ราคา</th>
-            <th>ภาพ</th>
-            <th>ประเภท</th>
+            <th>รหัสประเภท</th>
+            <th>ชื่อประเภทเมนู</th>
         </thead>
     
     <tbody>
+
     <?php
 
         // loop สำหรับวนซ้ำตัวที่เป็น arrey , object
-        foreach($result as $menu){
+        foreach($result as $menu_types){
             ?>
             <tr>
-                <td><?= $menu["menu_id"] ?></td>
-                <td><?= $menu["menu_name"] ?></td>
-                <td><strong><?= $menu["menu_price"] ?> บาท</strong></td>
-                <td>
-                <img src="<?= $menu["menu_image"] ?>" 
-                alt=""
-                style="width:120px; height:120px;"> </td>
-                <td><?= $menu["type_id"] ?></td>
+                <td><?= $menu_types["type_id"] ?></td>
+                <td><?= $menu_types["type_name"] ?></td>
             </tr>
             <?php
 
         }
 
-        
     ?>
     </tbody>
-
-    </table>
-     
-
-</body>
-</html>
