@@ -33,7 +33,6 @@
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(228, 0, 43, 0.2);
             transition: all 0.2s ease;
-            align-self: flex-end; /* ให้ปุ่มเยื้องไปทางขวา */
             max-width: 900px;
             width: fit-content;
         }
@@ -106,6 +105,7 @@
             max-width: 900px;
             display: flex;
             justify-content: flex-end;
+            gap: 10px;
         }
     </style>
 </head>
@@ -138,6 +138,7 @@
     ?>
 
     <div class="container">
+        <a href="manage_menu.php" class="btn-kfc" style="background-color: #202124;">จัดการข้อมูล (Manage) ⚙️</a>
         <a href="menu_types.php" class="btn-kfc">ดูประเภทเมนู ➔</a>
     </div>
 
